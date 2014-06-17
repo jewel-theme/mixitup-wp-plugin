@@ -50,4 +50,15 @@ function setting_html() {
 function register_mixit_options() {
     register_setting('mixit-options-group', 'mixit_json_options');
 }
+
+/**
+ * Creating Gallery custom post type
+ */
+include_once MIXIT_PLUGIN_PATH . 'inc/gallery-cpt.php';
+
+/**
+ * For frontend
+ */
+
+include_once MIXIT_PLUGIN_PATH . 'inc/shortcode.php';
 ?>
