@@ -48,8 +48,6 @@ function setting_html() {
 }
 
 function register_mixit_options() {
-    register_setting('mixit-options-group', 'new_option_name');
-    register_setting('mixit-options-group', 'some_other_option');
-    register_setting('mixit-options-group', 'option_etc');
+    register_setting('mixit-options-group', 'mixit_json_options');
 }
 ?>
