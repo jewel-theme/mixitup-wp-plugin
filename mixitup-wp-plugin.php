@@ -8,7 +8,6 @@
  * Version: 1.0
  * Author URI: https://github.com/harshit101
  */
-
 /**
  * @constant MIXIT_PLUGIN_PATH
  * @description Constant for plugin DIR PATH
@@ -41,10 +40,16 @@ add_action('admin_menu', 'create_mixit_setting_page');
 
 function create_mixit_setting_page() {
     add_options_page('Mixitup Options', 'Mixit Options', 'administrator', 'mixitup-options', 'setting_html');
+    add_action('admin_init', 'register_mixit_options');
 }
 
 function setting_html() {
     include_once MIXIT_PLUGIN_PATH . 'inc/options.php';
 }
 
+function register_mixit_options() {
+    register_setting('mixit-options-group', 'new_option_name');
+    register_setting('mixit-options-group', 'some_other_option');
+    register_setting('mixit-options-group', 'option_etc');
+}
 ?>
